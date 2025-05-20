@@ -11,7 +11,7 @@ This repository provides two MikroTik RouterOS scripts that automatically fetch 
   - Google: [https://www.gstatic.com/ipranges/goog.json](https://www.gstatic.com/ipranges/goog.json)
 - ✅ Safe parsing and route installation
 - 🔃 Deletes outdated routes on each run
-- 💡 Fully compatible with MikroTik RouterOS scripting
+- 💡 Fully compatible with MikroTik RouterOS scripting (was tested on RouterOS 7.18.2)
 - 🕓 Designed to run on boot and daily via `/system scheduler`
 
 ---
