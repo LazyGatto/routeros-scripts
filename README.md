@@ -5,6 +5,11 @@ Cloudflare Network Routes Updater Script for MikroTik RouterOS
 
 This RouterOS script automatically downloads the latest list of Cloudflare IPv4 networks from the official URL (https://www.cloudflare.com/ips-v4) and installs them as static routes into a dedicated routing table.
 
+## update-google-nets
+Google IPs Routes Updater Script for MikroTik RouterOS
+
+This RouterOS script automatically downloads the latest list of Google IPv4 networks from the URL (https://www.gstatic.com/ipranges/goog.json) and installs them as static routes into a dedicated routing table.
+
 ### 🕓 Scheduled Execution
 To run the script automatically:
 At system startup
