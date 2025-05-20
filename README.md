@@ -11,7 +11,7 @@ This repository provides two MikroTik RouterOS scripts that automatically fetch 
   - Google: [https://www.gstatic.com/ipranges/goog.json](https://www.gstatic.com/ipranges/goog.json)
 - ✅ Safe parsing and route installation
 - 🔃 Deletes outdated routes on each run
-- 💡 Fully compatible with MikroTik RouterOS scripting (was tested on RouterOS 7.18.2)
+- 💡 Fully compatible with MikroTik RouterOS scripting
 - 🕓 Designed to run on boot and daily via `/system scheduler`
 
 ---
@@ -131,5 +131,32 @@ MIT License — feel free to use, adapt, and contribute.
 
 ## 🙌 Credits
 
-Created by [LazyGatto]  
+Created by [YourName]  
 Inspired by real-world MikroTik routing scenarios and automation needs.
+
+---
+
+## 🚀 Installation
+
+To install everything in one step:
+
+1. Log in to your MikroTik via terminal (Winbox, SSH, etc.)
+2. Run the following command:
+
+```routeros
+/tool fetch url=https://raw.githubusercontent.com/LazyGatto/routeros-scripts/main/install-route-updaters.rsc mode=https
+/import file-name=install-route-updaters.rsc
+```
+
+This will:
+
+- Create the required routing tables: `CloudFlareNets` and `GoogleNets`
+- Download and import the following scripts:
+  - `update-cloudflare-routes.rsc`
+  - `update-google-routes.rsc`
+  - `run-startup-scripts.rsc`
+- Set up two scheduled tasks:
+  - One to run the updater at system startup
+  - One to run it daily at 02:00 AM
+
+> All files are downloaded directly from the GitHub repository: [LazyGatto/routeros-scripts](https://github.com/LazyGatto/routeros-scripts)
